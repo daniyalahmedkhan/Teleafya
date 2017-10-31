@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="50dp"
+        android:paddingBottom="15dp"
         android:layout_marginLeft="10dp">
         
         
@@ -17,20 +18,22 @@
             android:layout_height="wrap_content"
             android:src="@mipmap/company_name"
             android:id="@+id/ImageComp"
+            android:layout_marginTop="5dp"
             />
         
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="This is Some Text"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="33dp"
+            android:textColor="@color/colorPrimary"
             android:id="@+id/Title1"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
             />
         
         
         
-    </LinearLayout>
+    </RelativeLayout>
     
 
-</LinearLayout>
+</RelativeLayout>

@@ -8,6 +8,7 @@ import android.graphics.PorterDuff;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TabHost;
+import android.widget.TextView;
 
 import com.example.ast.teleafya.R;
 
@@ -41,17 +42,26 @@ public class ProfileActivity extends TabActivity {
        tabHost.addTab(songspec); // Adding songs tab
 
 
-        tabHost.getTabWidget().getChildAt(tabHost.getCurrentTab()).getBackground().setColorFilter(0, PorterDuff.Mode.MULTIPLY);
+//        tabHost.getTabWidget().getChildAt(tabHost.getCurrentTab()).getBackground().setColorFilter(0, PorterDuff.Mode.MULTIPLY);
+//
+//
+//        tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
+//            @Override
+//            public void onTabChanged(String s) {
+//
+//
+//                tabHost.getTabWidget().getChildAt(tabHost.getCurrentTab()).getBackground().setColorFilter(0, PorterDuff.Mode.MULTIPLY);
+//            }
+//        });
 
 
-        tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
-            @Override
-            public void onTabChanged(String s) {
 
-
-                tabHost.getTabWidget().getChildAt(tabHost.getCurrentTab()).getBackground().setColorFilter(0, PorterDuff.Mode.MULTIPLY);
-            }
-        });
+        TabHost tabhost = getTabHost();
+        for(int i=0;i<tabhost.getTabWidget().getChildCount();i++)
+        {
+            TextView tv = (TextView) tabhost.getTabWidget().getChildAt(i).findViewById(android.R.id.title);
+            tv.setTextColor(getResources().getColor(R.color.colorPrimary));
+        }
 
     }
 }
