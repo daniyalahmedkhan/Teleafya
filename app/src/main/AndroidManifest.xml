@@ -101,7 +101,10 @@
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
         <activity android:name=".Ui.Pharmacy_Ui.CompanyInfo" />
         <activity android:name=".Ui.Pharmacy_Ui.AccountInfo" />
-        <activity android:name=".Ui.Pharmacy_Ui.AddNewMethod"
+        <activity
+            android:name=".Ui.Pharmacy_Ui.AddNewMethod"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Ui.Pharmacy_Ui.AddNewMethod_mpesa"
             android:theme="@style/AppTheme.NoActionBar"
 
             ></activity>

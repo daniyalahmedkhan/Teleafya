@@ -17,14 +17,14 @@ import java.util.ArrayList;
  * Created by Kashif on 11/1/2017.
  */
 
-public class NewMethod_Custom extends ArrayAdapter {
+public class mPesa_CustomAdapter extends ArrayAdapter {
 
     String[] titleArray;
     ArrayList<String[]> arr;
 
 
-    public NewMethod_Custom(Context context, ArrayList<String[]> arr) {
-        super(context, R.layout.new_method_custom, arr);
+    public mPesa_CustomAdapter(Context context, ArrayList<String[]> arr) {
+        super(context, R.layout.custom_mpesa, arr);
         this.arr = arr;
 
     }
@@ -41,13 +41,14 @@ public class NewMethod_Custom extends ArrayAdapter {
         return super.getCount();
     }
 
+
     @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
 
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View row = inflater.inflate(R.layout.new_method_custom, parent, false);
+        View row = inflater.inflate(R.layout.custom_mpesa, parent, false);
 
 
 
@@ -60,14 +61,8 @@ public class NewMethod_Custom extends ArrayAdapter {
         textView2.setText(titleArray[1]);
 
 
-
-
-
-
-
-
-
-
         return row;
     }
+
+
 }

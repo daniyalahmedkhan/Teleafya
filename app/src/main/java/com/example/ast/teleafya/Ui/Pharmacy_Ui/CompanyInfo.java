@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
@@ -16,7 +17,7 @@ public class CompanyInfo extends AppCompatActivity {
     int[] images = {R.mipmap.company_name , R.mipmap.establishment , R.mipmap.code , R.mipmap.email , R.drawable.phone , R.mipmap.password , R.mipmap.code , R.mipmap.city , R.mipmap.state ,   R.mipmap.flat , R.mipmap.loca , R.mipmap.documents };
 
     ListView l1;
-
+    ImageView selectdata , selectedData;
 
 
     @Override
@@ -27,8 +28,45 @@ public class CompanyInfo extends AppCompatActivity {
         Custom_CompanyAdapter adapter = new Custom_CompanyAdapter(CompanyInfo.this, images ,titles );
         l1.setAdapter(adapter);
 
-        View footerView = ((LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.profile_footer, null, false);
+
+        final View footerView = ((LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.profile_footer, null, false);
+
+
         l1.addFooterView(footerView);
+
+
+        selectdata = (ImageView) findViewById(R.id.imag1);
+
+
+        selectdata.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                footerView.setVisibility(View.GONE);
+                final View footerView2 = ((LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.profile_footer_uploaded, null, false);
+
+                l1.addFooterView(footerView2);
+                selectedData = (ImageView) findViewById(R.id.imag2);
+
+                selectedData.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        footerView2.setVisibility(View.GONE);
+                    }
+                });
+
+
+            }
+
+
+        });
+
+
+
+
+
+
+
 
     }
 }

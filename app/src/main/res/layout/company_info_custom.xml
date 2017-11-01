@@ -26,8 +26,9 @@
             android:layout_height="wrap_content"
             android:text="This is Some Text"
             android:layout_marginLeft="33dp"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorText"
             android:id="@+id/Title1"
+            android:layout_marginTop="-7dp"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
             />
         
